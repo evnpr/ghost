@@ -53,11 +53,22 @@ config = {
             },
             debug: false
         },
+        database: {
+          client: 'postgres',
+          connection: {
+                host: 'ec2-174-129-21-42.compute-1.amazonaws.com',
+                user: 'xvvlbmcjsifqwl',
+                password: 'eWbLCaZCKO8sNYu14ghypLlFkY',
+                database: 'd90m24ff7i7evr',
+                port: '5432'
+        }
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            // host: '127.0.0.1',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: '2368'
+            // port: '2368'
+            host: '0.0.0.0',
+            port: process.env.PORT
         }
     },
 
