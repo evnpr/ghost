@@ -47,13 +47,6 @@ config = {
         url: 'http://my-ghost-blog.com',
         mail: {},
         database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
-        },
-        database: {
           client: 'postgres',
           connection: {
                 host: 'ec2-174-129-21-42.compute-1.amazonaws.com',
@@ -61,13 +54,12 @@ config = {
                 password: 'eWbLCaZCKO8sNYu14ghypLlFkY',
                 database: 'd90m24ff7i7evr',
                 port: '5432'
-        }
+          }
+        },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            // host: '127.0.0.1',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            // port: '2368'
             host: '0.0.0.0',
+            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT
         }
     },
